@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#020617] text-slate-200 antialiased;
+  }
+}
+
+@layer components {
+  .dashboard-card {
+    @apply bg-slate-900/50 border border-slate-800 rounded-3xl backdrop-blur-sm transition-all duration-300;
+  }
+  
+  .dashboard-card:hover {
+    @apply border-slate-700 bg-slate-900/70 shadow-2xl shadow-emerald-500/5;
+  }
+
+  .status-pill {
+    @apply text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider;
+  }
+}
